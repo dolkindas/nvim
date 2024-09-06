@@ -44,12 +44,7 @@ require("lazy").setup({
       'nvim-telescope/telescope.nvim', tag = '0.1.8',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    {
-    "shaunsingh/solarized.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
@@ -58,7 +53,7 @@ require("lazy").setup({
 })
 
 -- can only set the color scheme once the plugin is initialized
-vim.cmd.colorscheme 'solarized'
+vim.cmd.colorscheme 'catppuccin'
 
 
 -- telescope key bindings
